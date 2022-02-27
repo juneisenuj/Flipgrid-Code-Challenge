@@ -8,25 +8,29 @@ const Form = () => {
     const [password, setPassword] = useState('');
     const [validFirstName, setValidFirstName] = useState(false);
     const [validEmail, setValidEmail] = useState(false);
+    const [validPassword, setValidPassword] = useState(false);
 
     const formValidation = () => {
         console.log('formvalidation function trigger')
         let specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
         let mailFormat = /^\S+@\S+\.\S+$/;
+        let numbers = /[0-9]/;
         
         // validates first name (checks for special letters)
-        if (!specialChars.test(firstName)) {
+        if (specialChars.test(firstName)) {
             setValidFirstName(true);
         }
 
         // validates email
-        if (email.match(mailFormat)) {
+        if (!email.match(mailFormat)) {
             setValidEmail(true);
         }
 
         // validates password
         // should contain at least 1 number, 1 special letter, and 8 ~ 16 characters
-
+        if (password.search(numbers) < 0 || password.search(specialChars) < 0 || 8 >= password.length >= 16) {
+            setValidPassword(true);
+        }
 
     }
 
@@ -53,6 +57,10 @@ const Form = () => {
                         First Name
                     </label>
                     <input onChange={(e) => setFirstName(e.target.value)} />
+                    {!validFirstName
+                        ? ''
+                        : <div>first name warning</div>
+                    }
                 </div>
 
                 <div className='row'>
@@ -60,6 +68,10 @@ const Form = () => {
                         Email Address
                     </label>
                     <input onChange={(e) => setEmail(e.target.value)} />
+                    {!validEmail
+                        ? ''
+                        : <div>email warning</div>
+                    }
                 </div>
 
                 <div className='row'>
@@ -67,6 +79,10 @@ const Form = () => {
                         Password
                     </label>
                     <input onChange={(e) => setPassword(e.target.value)} />
+                    {!validPassword
+                        ? ''
+                        : <div>password warning</div>
+                    }
                 </div>
                 <button type='submit' disabled={firstName === '' || email === '' || password === ''} onClick={(e) => submitForm(e)}>button</button>
             </form>
