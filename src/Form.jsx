@@ -10,7 +10,7 @@ const Form = () => {
     return (
         <div className='form-container'>
             <form className='form'>
-                
+
                 <div className='form-intro'>
                     <div className='title'>
                         <div className='title-lets'>Let's</div>
@@ -39,7 +39,7 @@ const Form = () => {
                     </label>
                     <input onChange={(e) => setPassword(e.target.value)} />
                 </div>
-                <button>button</button>
+                <button type='submit' disabled={firstName === '' || email === '' || password === ''}>button</button>
             </form>
         </div>
     );
