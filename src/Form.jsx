@@ -78,7 +78,7 @@ const Form = () => {
                     <label className='label'>
                         Password
                     </label>
-                    <input onChange={(e) => setPassword(e.target.value)} />
+                    <input type='password' onChange={(e) => setPassword(e.target.value)} />
                     {!validPassword
                         ? ''
                         : <div>password warning</div>
