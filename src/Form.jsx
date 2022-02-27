@@ -53,7 +53,7 @@ const Form = () => {
                 </div>
 
                 <div className='row'>
-                    <label className='label'>
+                    <label className={!validFirstName ? 'label' : 'label-warning'}>
                         First Name
                     </label>
                     <input onChange={(e) => setFirstName(e.target.value)} />
@@ -64,7 +64,7 @@ const Form = () => {
                 </div>
 
                 <div className='row'>
-                    <label className='label'>
+                    <label className={!validEmail ? 'label' : 'label-warning'}>
                         Email Address
                     </label>
                     <input onChange={(e) => setEmail(e.target.value)} />
@@ -75,7 +75,7 @@ const Form = () => {
                 </div>
 
                 <div className='row'>
-                    <label className='label'>
+                    <label className={!validPassword ? 'label' : 'label-warning'}>
                         Password
                     </label>
                     <input type='password' onChange={(e) => setPassword(e.target.value)} />
