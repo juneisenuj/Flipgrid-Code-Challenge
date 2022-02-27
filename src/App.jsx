@@ -1,11 +1,13 @@
+import React from "react";
+import './styles/Global/global.scss';
+import Main from "./Main";
 
-
-function App() {
+function flipGrid() {
   return (
-    <div className="App">
-      app
+    <div className="flipGrid">
+      <Main />
     </div>
   );
 }
 
-export default App;
+export default flipGrid;

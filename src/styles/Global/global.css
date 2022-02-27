@@ -1,0 +1,19 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  font-family: gilroy, "Helvetica Neue", Arial, "Noto Sans";
+}
+
+body {
+  height: 100%;
+  background-color: #e9e9e9;
+}
+
+#renderWeb {
+  height: 100%;
+}
+/*# sourceMappingURL=global.css.map */
