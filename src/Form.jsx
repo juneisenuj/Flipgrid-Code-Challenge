@@ -7,6 +7,11 @@ const Form = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const submitForm = (e) => {
+        e.preventDefault();
+        console.log('clicked')
+    }
+
     return (
         <div className='form-container'>
             <form className='form'>
@@ -39,7 +44,7 @@ const Form = () => {
                     </label>
                     <input onChange={(e) => setPassword(e.target.value)} />
                 </div>
-                <button type='submit' disabled={firstName === '' || email === '' || password === ''}>button</button>
+                <button type='submit' disabled={firstName === '' || email === '' || password === ''} onClick={(e) => submitForm(e)}>button</button>
             </form>
         </div>
     );
