@@ -10,27 +10,34 @@ const Form = () => {
     return (
         <div className='form-container'>
             <form className='form'>
-                <div className='form-intro'>form intro</div>
+                
+                <div className='form-intro'>
+                    <div className='title'>
+                        <div className='title-lets'>Let's</div>
+                        <div className='title-signup'>Sign Up</div>
+                    </div>
+                    <div className='instruction'>Use the form below to sign up for this super awesome service. You're only a few steps away!</div>
+                </div>
 
                 <div className='row'>
                     <label className='label'>
                         First Name
                     </label>
-                    <input onChange={(e) => setFirstName(e.target.value)}/>
+                    <input onChange={(e) => setFirstName(e.target.value)} />
                 </div>
 
                 <div className='row'>
                     <label className='label'>
                         Email Address
                     </label>
-                    <input onChange={(e) => setEmail(e.target.value)}/>
+                    <input onChange={(e) => setEmail(e.target.value)} />
                 </div>
 
                 <div className='row'>
                     <label className='label'>
                         Password
                     </label>
-                    <input onChange={(e) => setPassword(e.target.value)}/>
+                    <input onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <button>button</button>
             </form>

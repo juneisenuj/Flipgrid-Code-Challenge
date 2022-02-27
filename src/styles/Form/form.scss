@@ -3,4 +3,38 @@
     justify-content: center;
     align-items: center;
     border: 1px solid black;
+    width: 450px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    margin: 20px 20px 20px 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-intro {
+    margin-bottom: 15px;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.title-lets {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.title-signup {
+    font-size: 30px;
+    font-weight: 600;
 }
