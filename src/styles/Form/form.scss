@@ -2,8 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
     width: 450px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    
 }
 
 .form {
@@ -61,7 +64,7 @@
     height: 25px;
     margin-top: 5px;
     background-color: rgb(255, 44, 44);
-    color: snow;
+    color: white;
     border-radius: 5px;
     border: none;
 }
