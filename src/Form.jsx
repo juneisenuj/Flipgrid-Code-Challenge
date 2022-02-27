@@ -6,10 +6,34 @@ const Form = () => {
     const [firstName, setFirstName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [validFirstName, setValidFirstName] = useState(false);
+    const [validEmail, setValidEmail] = useState(false);
+
+    const formValidation = () => {
+        console.log('formvalidation function trigger')
+        let specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+        let mailFormat = /^\S+@\S+\.\S+$/;
+        
+        // validates first name (checks for special letters)
+        if (!specialChars.test(firstName)) {
+            setValidFirstName(true);
+        }
+
+        // validates email
+        if (email.match(mailFormat)) {
+            setValidEmail(true);
+        }
+
+        // validates password
+        // should contain at least 1 number, 1 special letter, and 8 ~ 16 characters
+
+
+    }
 
     const submitForm = (e) => {
         e.preventDefault();
         console.log('clicked')
+        formValidation()
     }
 
     return (
