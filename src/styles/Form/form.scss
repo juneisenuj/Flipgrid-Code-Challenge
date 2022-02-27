@@ -6,7 +6,6 @@
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: white;
-    
 }
 
 .form {
@@ -57,6 +56,21 @@
     color: red;
     margin-top: 5px;
 }
+
+.form-input {
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 5px;
+    height: 25px;
+    padding-left: 5px;
+}
+
+.form-input-warning {
+    border: 1px solid red;
+    border-radius: 5px;
+    height: 25px;
+    padding-left: 5px;
+}
+
 
 .sign-up-button {
     margin-left: auto;

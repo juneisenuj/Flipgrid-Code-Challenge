@@ -40,6 +40,11 @@ const Form = () => {
         formValidation()
     }
 
+    const removeFirstNameWarning = (e) => {
+        console.log(e)
+
+    }
+
     return (
         <div className='form-container'>
             <form className='form'>
@@ -56,7 +61,10 @@ const Form = () => {
                     <label className={!validFirstName ? 'label' : 'label-warning'}>
                         First Name
                     </label>
-                    <input onChange={(e) => setFirstName(e.target.value)} />
+                    <input className={!validFirstName ? 'form-input' : 'form-input-warning'} onChange={(e) => {
+                        setFirstName(e.target.value);
+                        setValidFirstName(false);
+                        }} />
                     {!validFirstName
                         ? ''
                         : <div className='invalid-warning'>Please enter your name.</div>
@@ -67,7 +75,10 @@ const Form = () => {
                     <label className={!validEmail ? 'label' : 'label-warning'}>
                         Email Address
                     </label>
-                    <input onChange={(e) => setEmail(e.target.value)} />
+                    <input className={!validEmail ? 'form-input' : 'form-input-warning'} onChange={(e) => {
+                        setEmail(e.target.value);
+                        setValidEmail(false);
+                        }} />
                     {!validEmail
                         ? ''
                         : <div className='invalid-warning'>Please enter a valid Email.</div>
@@ -78,7 +89,10 @@ const Form = () => {
                     <label className={!validPassword ? 'label' : 'label-warning'}>
                         Password
                     </label>
-                    <input type='password' onChange={(e) => setPassword(e.target.value)} />
+                    <input className={!validPassword ? 'form-input' : 'form-input-warning'} type='password' onChange={(e) => {
+                        setPassword(e.target.value);
+                        setValidPassword(false);
+                        }} />
                     {!validPassword
                         ? ''
                         : <div className='invalid-warning'>Password should contain at least one number and one special letter.</div>
