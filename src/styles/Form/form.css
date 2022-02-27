@@ -56,4 +56,9 @@
   font-size: 30px;
   font-weight: 600;
 }
+
+.invalid-warning {
+  color: red;
+  margin-top: 5px;
+}
 /*# sourceMappingURL=form.css.map */

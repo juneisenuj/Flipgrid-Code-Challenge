@@ -59,7 +59,7 @@ const Form = () => {
                     <input onChange={(e) => setFirstName(e.target.value)} />
                     {!validFirstName
                         ? ''
-                        : <div>first name warning</div>
+                        : <div className='invalid-warning'>Please enter your name.</div>
                     }
                 </div>
 
@@ -70,7 +70,7 @@ const Form = () => {
                     <input onChange={(e) => setEmail(e.target.value)} />
                     {!validEmail
                         ? ''
-                        : <div>email warning</div>
+                        : <div className='invalid-warning'>Please enter a valid Email.</div>
                     }
                 </div>
 
@@ -81,7 +81,7 @@ const Form = () => {
                     <input type='password' onChange={(e) => setPassword(e.target.value)} />
                     {!validPassword
                         ? ''
-                        : <div>password warning</div>
+                        : <div className='invalid-warning'>Password should contain at least one number and one special letter.</div>
                     }
                 </div>
                 <button type='submit' disabled={firstName === '' || email === '' || password === ''} onClick={(e) => submitForm(e)}>button</button>
