@@ -16,21 +16,21 @@ const Form = () => {
                     <label className='label'>
                         First Name
                     </label>
-                    <input />
+                    <input onChange={(e) => setFirstName(e.target.value)}/>
                 </div>
 
                 <div className='row'>
                     <label className='label'>
                         Email Address
                     </label>
-                    <input />
+                    <input onChange={(e) => setEmail(e.target.value)}/>
                 </div>
 
                 <div className='row'>
                     <label className='label'>
                         Password
                     </label>
-                    <input />
+                    <input onChange={(e) => setPassword(e.target.value)}/>
                 </div>
                 <button>button</button>
             </form>
