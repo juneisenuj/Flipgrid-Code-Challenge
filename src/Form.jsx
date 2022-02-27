@@ -3,7 +3,7 @@ import './styles/Form/form.scss';
 
 const Form = () => {
     return (
-        <div>
+        <div className='form-container'>
             <form>
                 <div>form intro</div>
 
