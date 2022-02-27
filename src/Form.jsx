@@ -84,7 +84,7 @@ const Form = () => {
                         : <div className='invalid-warning'>Password should contain at least one number and one special letter.</div>
                     }
                 </div>
-                <button type='submit' disabled={firstName === '' || email === '' || password === ''} onClick={(e) => submitForm(e)}>button</button>
+                <button type='submit' className='sign-up-button' disabled={firstName === '' || email === '' || password === ''} onClick={(e) => submitForm(e)}>button</button>
             </form>
         </div>
     );
