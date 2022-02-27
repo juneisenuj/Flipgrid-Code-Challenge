@@ -1,9 +1,10 @@
 import React from 'react';
+import Form from './Form';
 
 const Main = () => {
     return (
         <div className='main'>
-            Main
+            <Form />
         </div>
     );
 };
