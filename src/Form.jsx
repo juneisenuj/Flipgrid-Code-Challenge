@@ -108,6 +108,7 @@ const Form = () => {
                 </div>
                 <button type='submit' className='sign-up-button' disabled={firstName === '' || email === '' || password === ''} onClick={(e) => submitForm(e)}>Sign Up</button>
             </form>
+            <Comfirmation firstName={firstName} email={email}/>
         </div>
     );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Comfirmation = () => {
+const Comfirmation = ( {firstName, email }) => {
     return (
         <div>
             
