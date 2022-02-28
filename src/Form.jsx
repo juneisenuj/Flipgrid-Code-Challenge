@@ -65,7 +65,6 @@ const Form = () => {
     return (
         <div className='form-container'>
             <form className='form'>
-
                 <div className='form-intro'>
                     <div className='title'>
                         <div className='title-lets'>Let's</div>
@@ -73,7 +72,6 @@ const Form = () => {
                     </div>
                     <div className='instruction'>Use the form below to sign up for this super awesome service. You're only a few steps away!</div>
                 </div>
-
                 <div className='row'>
                     <label className={!validFirstName ? 'label' : 'label-warning'}>
                         First Name
@@ -87,7 +85,6 @@ const Form = () => {
                         : <div className='invalid-warning'>Please enter your name.</div>
                     }
                 </div>
-
                 <div className='row'>
                     <label className={!validEmail ? 'label' : 'label-warning'}>
                         Email Address
@@ -101,7 +98,6 @@ const Form = () => {
                         : <div className='invalid-warning'>Please enter a valid Email.</div>
                     }
                 </div>
-
                 <div className='row'>
                     <label className={!validPassword ? 'label' : 'label-warning'}>
                         Password

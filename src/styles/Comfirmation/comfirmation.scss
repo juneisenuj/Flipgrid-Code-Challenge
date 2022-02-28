@@ -44,10 +44,11 @@
 .sign-in-button:hover {
     cursor: pointer;
     background-color: rgb(255, 32, 32);
-    transition: 1s
+    transition: 0.5s
 }
 
 .sign-in-button:active, .sign-in-button:focus {
     box-shadow: rgb(0, 0, 0, 0.16) 0px 1px 4px;
     transform: scale(1.05);
+    transition: 0s;
 }

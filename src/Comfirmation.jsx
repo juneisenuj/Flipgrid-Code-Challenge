@@ -17,7 +17,6 @@ const Comfirmation = ( {firstName, email }) => {
                 </div>
                 <button className='sign-in-button'>Sign In</button>
             </div>
-            
         </div>
     );
 };
