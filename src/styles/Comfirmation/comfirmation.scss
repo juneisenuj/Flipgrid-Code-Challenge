@@ -1,7 +1,16 @@
 .comfirmation-container {
     display: none;
     margin: 20px 20px 20px 20px;
+    animation: fadeIn 1s;
+}
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .title-welcome {
