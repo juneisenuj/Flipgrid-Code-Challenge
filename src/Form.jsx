@@ -28,14 +28,14 @@ const Form = () => {
 
         // validates password
         // should contain at least 1 number, 1 special letter, and 8 ~ 16 characters
-        if (password.search(numbers) < 0 || password.search(specialChars) < 0 || 8 >= password.length >= 16) {
+        if (password.search(numbers) < 0 || password.search(specialChars) < 0 || password.length <= 8) {
             setValidPassword(true);
         }
 
         // displays comfirmation component and hides the form if all the criteria are met
         if (!specialChars.test(firstName) && firstName !== '' && 
         email !== '' && email.match(mailFormat) && password.search(numbers) > 0 && 
-        password.search(specialChars) > 0 && 8 <= password.length <= 16) {
+        password.search(specialChars) > 0 && password.length >= 8) {
             let formElement = document.querySelector('.form');
             let comfirmationElement = document.querySelector('.comfirmation-container');
             formElement.style.display = 'none';
@@ -82,7 +82,7 @@ const Form = () => {
                         }} />
                     {!validFirstName
                         ? ''
-                        : <div className='invalid-warning'>Please enter your name.</div>
+                        : <div className='invalid-warning'>Please enter a valid first name.</div>
                     }
                 </div>
                 <div className='row'>
@@ -95,7 +95,7 @@ const Form = () => {
                         }} />
                     {!validEmail
                         ? ''
-                        : <div className='invalid-warning'>Please enter a valid Email.</div>
+                        : <div className='invalid-warning'>Please enter a valid email address.</div>
                     }
                 </div>
                 <div className='row'>
@@ -108,7 +108,7 @@ const Form = () => {
                         }} />
                     {!validPassword
                         ? ''
-                        : <div className='invalid-warning'>Password should contain at least one number and one special letter.</div>
+                        : <div className='invalid-warning'>Password must have at least 8 characters with 1 number and 1 special letter.</div>
                     }
                 </div>
                 <button type='submit' className='sign-up-button' disabled={firstName === '' || email === '' || password === ''} onClick={(e) => submitForm(e)}>Sign Up</button>
