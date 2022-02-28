@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './styles/Form/form.scss';
+import Comfirmation from './Comfirmation';
 
 const Form = () => {
 
@@ -11,7 +12,6 @@ const Form = () => {
     const [validPassword, setValidPassword] = useState(false);
 
     const formValidation = () => {
-        console.log('formvalidation function trigger')
         let specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
         let mailFormat = /^\S+@\S+\.\S+$/;
         let numbers = /[0-9]/;
@@ -32,12 +32,20 @@ const Form = () => {
             setValidPassword(true);
         }
 
+        // displays comfirmation component and hides the form if all the criteria are met
+        if (!specialChars.test(firstName) && firstName !== '' && 
+        email !== '' && email.match(mailFormat) && password.search(numbers) > 0 && 
+        password.search(specialChars) > 0 && 8 <= password.length <= 16) {
+            let formElement = document.querySelector('.form');
+            let comfirmationElement = document.querySelector('.comfirmation-container');
+            formElement.style.display = 'none';
+            comfirmationElement.style.display = 'block';
+        }
     }
 
     const submitForm = (e) => {
         e.preventDefault();
-        console.log('clicked')
-        formValidation()
+        formValidation();
     }
 
     const removeWarning = (e) => {
@@ -52,13 +60,11 @@ const Form = () => {
         if (e === 'form-input-warning invalid-password') {
             setValidPassword(false);
         }
-
     }
 
     return (
         <div className='form-container'>
             <form className='form'>
-
                 <div className='form-intro'>
                     <div className='title'>
                         <div className='title-lets'>Let's</div>
@@ -66,7 +72,6 @@ const Form = () => {
                     </div>
                     <div className='instruction'>Use the form below to sign up for this super awesome service. You're only a few steps away!</div>
                 </div>
-
                 <div className='row'>
                     <label className={!validFirstName ? 'label' : 'label-warning'}>
                         First Name
@@ -80,7 +85,6 @@ const Form = () => {
                         : <div className='invalid-warning'>Please enter your name.</div>
                     }
                 </div>
-
                 <div className='row'>
                     <label className={!validEmail ? 'label' : 'label-warning'}>
                         Email Address
@@ -94,7 +98,6 @@ const Form = () => {
                         : <div className='invalid-warning'>Please enter a valid Email.</div>
                     }
                 </div>
-
                 <div className='row'>
                     <label className={!validPassword ? 'label' : 'label-warning'}>
                         Password
@@ -110,6 +113,7 @@ const Form = () => {
                 </div>
                 <button type='submit' className='sign-up-button' disabled={firstName === '' || email === '' || password === ''} onClick={(e) => submitForm(e)}>Sign Up</button>
             </form>
+            <Comfirmation firstName={firstName} email={email}/>
         </div>
     );
 };

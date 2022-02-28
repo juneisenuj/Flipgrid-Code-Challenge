@@ -92,6 +92,8 @@
 
 .sign-up-button:hover {
     cursor: pointer;
+    background-color: rgb(255, 32, 32);
+    transition: 0.5s;
 }
 
 .sign-up-button:disabled {
@@ -101,4 +103,5 @@
 .sign-up-button:active, .sign-up-button:focus {
     box-shadow: rgb(0, 0, 0, 0.16) 0px 1px 4px;
     transform: scale(1.05);
+    transition: 0s;
 }

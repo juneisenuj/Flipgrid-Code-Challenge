@@ -1,0 +1,54 @@
+.comfirmation-container {
+    display: none;
+    margin: 20px 20px 20px 20px;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.title-welcome {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.title-firstname {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.comfirmation-email {
+    font-weight: 600;
+}
+
+.sign-in-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    width: 70px;
+    height: 25px;
+    margin-top: 5px;
+    background-color: rgb(255, 44 ,44);
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.sign-in-button:hover {
+    cursor: pointer;
+    background-color: rgb(255, 32, 32);
+    transition: 0.5s
+}
+
+.sign-in-button:active, .sign-in-button:focus {
+    box-shadow: rgb(0, 0, 0, 0.16) 0px 1px 4px;
+    transform: scale(1.05);
+    transition: 0s;
+}
