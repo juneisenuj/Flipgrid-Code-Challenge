@@ -1,6 +1,6 @@
 # Flipgrid Code Challenge - June Lee
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Flipgrid Code Challenge is a web application that provides users to sign up for the awesome service. The form has three fields(first name, email address, password) which are required to submit the form. It also validates the input submitted by the user. Once the user successfully fills out the form, the comfirmation page is displayed which provides their name and email address.
 
 
 ## Preview
@@ -17,6 +17,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ## Installation
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Install Flipgrid Code Challenge with npm
 
