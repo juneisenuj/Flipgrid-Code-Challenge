@@ -8,6 +8,13 @@
     background-color: white;
 }
 
+@media (max-width: 425px) {
+    .form-container {
+        box-shadow: none;
+        border-radius: 0;
+    }
+}
+
 .form {
     display: flex;
     flex-direction: column;
