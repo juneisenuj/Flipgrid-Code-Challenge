@@ -31,10 +31,10 @@ Sign up page
 Comfirmation page
 
 Additional items - Not required, chooseo one
-**• Form input validation**
-• Accessibility
-• Unit/Integration/Functional Tests
-• Feel free to surprise us with anything else
+**• Form input validation**  
+• Accessibility  
+• Unit/Integration/Functional Tests  
+• Feel free to surprise us with anything else  
 
 
 ## Authors
