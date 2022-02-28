@@ -32,7 +32,7 @@ const Form = () => {
             setValidPassword(true);
         }
 
-        // displays comfirmation component and hides the form if all the criterias are met
+        // displays comfirmation component and hides the form if all the criteria are met
         if (!specialChars.test(firstName) && firstName !== '' && 
         email !== '' && email.match(mailFormat) && password.search(numbers) > 0 && 
         password.search(specialChars) > 0 && 8 <= password.length <= 16) {

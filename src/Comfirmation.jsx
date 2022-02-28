@@ -6,16 +6,16 @@ const Comfirmation = ( {firstName, email }) => {
         <div className='comfirmation-container'>
             <div className='greeting'>
                 <div className='row'>
-                    <div>Welcome,</div>
-                    <div>{firstName}!</div>
+                    <div className='title-welcome'>Welcome,</div>
+                    <div className='title-firstname'>{firstName}!</div>
                 </div>
                 <div className='row'>
                     <div>You have been registered for this awesome service. Please check your email listed below for instructions.</div>
                 </div>
                 <div className='row'>
-                    <div>{email}</div>
+                    <div className='comfirmation-email'>{email}</div>
                 </div>
-                <button>Sign In</button>
+                <button className='sign-in-button'>Sign In</button>
             </div>
             
         </div>
