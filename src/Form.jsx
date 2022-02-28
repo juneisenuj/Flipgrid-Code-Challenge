@@ -40,8 +40,18 @@ const Form = () => {
         formValidation()
     }
 
-    const removeFirstNameWarning = (e) => {
-        console.log(e)
+    const removeWarning = (e) => {
+        if (e === 'form-input-warning invalid-first-name') {
+            setValidFirstName(false);
+        }
+
+        if (e === 'form-input-warning invalid-email') {
+            setValidEmail(false);
+        }
+
+        if (e === 'form-input-warning invalid-password') {
+            setValidPassword(false);
+        }
 
     }
 
@@ -61,9 +71,9 @@ const Form = () => {
                     <label className={!validFirstName ? 'label' : 'label-warning'}>
                         First Name
                     </label>
-                    <input className={!validFirstName ? 'form-input' : 'form-input-warning'} onChange={(e) => {
+                    <input className={!validFirstName ? 'form-input' : 'form-input-warning invalid-first-name'} onChange={(e) => {
                         setFirstName(e.target.value);
-                        setValidFirstName(false);
+                        removeWarning(e.target.className);
                         }} />
                     {!validFirstName
                         ? ''
@@ -75,9 +85,9 @@ const Form = () => {
                     <label className={!validEmail ? 'label' : 'label-warning'}>
                         Email Address
                     </label>
-                    <input className={!validEmail ? 'form-input' : 'form-input-warning'} onChange={(e) => {
+                    <input className={!validEmail ? 'form-input' : 'form-input-warning invalid-email'} onChange={(e) => {
                         setEmail(e.target.value);
-                        setValidEmail(false);
+                        removeWarning(e.target.className);
                         }} />
                     {!validEmail
                         ? ''
@@ -89,9 +99,9 @@ const Form = () => {
                     <label className={!validPassword ? 'label' : 'label-warning'}>
                         Password
                     </label>
-                    <input className={!validPassword ? 'form-input' : 'form-input-warning'} type='password' onChange={(e) => {
+                    <input className={!validPassword ? 'form-input' : 'form-input-warning invalid-password'} type='password' onChange={(e) => {
                         setPassword(e.target.value);
-                        setValidPassword(false);
+                        removeWarning(e.target.className);
                         }} />
                     {!validPassword
                         ? ''
