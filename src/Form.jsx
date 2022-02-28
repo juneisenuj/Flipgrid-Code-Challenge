@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './styles/Form/form.scss';
+import Comfirmation from './Comfirmation';
 
 const Form = () => {
 
@@ -31,6 +32,15 @@ const Form = () => {
             setValidPassword(true);
         }
 
+        // displays comfirmation component and hides the form if all the criterias are met
+        if (!specialChars.test(firstName) && firstName !== '' && 
+        email !== '' && email.match(mailFormat) && password.search(numbers) > 0 && 
+        password.search(specialChars) > 0 && 8 <= password.length <= 16) {
+            let formElement = document.querySelector('.form');
+            let comfirmationElement = document.querySelector('.comfirmation-container');
+            formElement.style.display = 'none';
+            comfirmationElement.style.display = 'block';
+        }
     }
 
     const submitForm = (e) => {
@@ -50,7 +60,6 @@ const Form = () => {
         if (e === 'form-input-warning invalid-password') {
             setValidPassword(false);
         }
-
     }
 
     return (
