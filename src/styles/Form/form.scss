@@ -92,6 +92,8 @@
 
 .sign-up-button:hover {
     cursor: pointer;
+    background-color: rgb(255, 32, 32);
+    transition: 1s;
 }
 
 .sign-up-button:disabled {
