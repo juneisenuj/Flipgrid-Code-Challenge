@@ -11,7 +11,6 @@ const Form = () => {
     const [validPassword, setValidPassword] = useState(false);
 
     const formValidation = () => {
-        console.log('formvalidation function trigger')
         let specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
         let mailFormat = /^\S+@\S+\.\S+$/;
         let numbers = /[0-9]/;
@@ -36,8 +35,7 @@ const Form = () => {
 
     const submitForm = (e) => {
         e.preventDefault();
-        console.log('clicked')
-        formValidation()
+        formValidation();
     }
 
     const removeWarning = (e) => {
